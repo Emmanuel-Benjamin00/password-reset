@@ -1,10 +1,10 @@
 @media (max-width: 371px) {
     .postman{
-        font-size: 13px;
+        font-size: 13px !important;
     }
     .form-box{
-        position: relative;
-        top: 35px;
+        position: relative !important;
+        top: 35px !important;
     }
   }
   
