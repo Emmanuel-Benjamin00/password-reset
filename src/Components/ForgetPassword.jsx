@@ -55,6 +55,8 @@ function ForgetPassword() {
                     </div>
                     <button className="btn btn-primary" id="forgot-button" type="submit" style={{ width: '100%' }} onClick={(e) => validateEmail(e)}>Forgot Password</button>
                 </form>
+                <br/>
+                <p style={{ width: '30vw' }}> After clicking the Forgot password button this page  takes few seconds to process. Since the backend is deployed in render platform, it takes some time. Please wait until it works.</p>
             </div>
 
         </>
