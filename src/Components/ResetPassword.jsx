@@ -8,9 +8,6 @@ function ResetPassword() {
   let [pass1, setpass1] = useState("")
   let [pass2, setpass2] = useState("")
 
-  console.log(pass1)
-  console.log(pass2)
-
   let [messageColor, setMessageColor] = useState("black")
   let [messagetext, setMessagetext] = useState("")
 
@@ -24,14 +21,10 @@ function ResetPassword() {
   async function validateToken() {
     try {
       let res = await AxiosService.get('/user/getUsers')
-      console.log(res)
       const reqUser = res.data.users.find(user => user.email === email)
       if (reqUser) {
         const tokenCheck = reqUser.randomString === token
-        if (tokenCheck) {
-          console.log("Correct Token")
-        }
-        else {
+        if (!tokenCheck) {
           navigate('/error')
         }
       }
@@ -75,7 +68,7 @@ function ResetPassword() {
       console.log(error)
       toast.error(error.response.data || "Password and confirm password doesnt match")
       setMessageColor("red")
-      setMessagetext("Empty field or passwords not matching in fields please enter correctly")
+      setMessagetext("Passwords not matching or the input fields are empty.")
     }
   }
 
@@ -85,13 +78,13 @@ function ResetPassword() {
 
   return (
     <>
-      <div className='postman position-absolute top-0 end-0 m-5 p-3 col-sm-12 col-md-3'>
+      <div className='postman position-absolute top-0 end-0 m-5 p-3  col-sm-12 col-md-3 col-lg-3'>
         <a className="btn btn-warning col-sm-12" href="https://documenter.getpostman.com/view/30441359/2s9YRCYCBV" target="blank" type="submit" id="button" >Postman Documentation</a>
         <p className='para'>Use Postman for <br /><span> 1. Creating User(To create a user)</span> <br /><span>2. List all users with their password(To check whether the password is changed).</span> </p>
       </div>
       <div className='d-flex align-items-center justify-content-center flex-column mt-5' style={{ height: '100vh' }} >
-        <h1 className='fs-2 mb-3'>Reset Password</h1>
-        <form className='col-md-3 col-xxl-5'>
+        <h1 className='fs-2 mb-3 form-box'>Reset Password</h1>
+        <form className='col-md-3 col-xxl-5 form-box'>
           <div className="mb-3" id="formBasicPassword1">
             <label htmlFor="password1" className='my-2 ms-1'>Password</label>
             <input type="password" className="form-control" id="password1" placeholder="Password" onChange={(e) => setpass1(e.target.value)} />
