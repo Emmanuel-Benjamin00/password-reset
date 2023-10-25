@@ -98,7 +98,8 @@ function ResetPassword() {
           <small className="form-text" id="message" style={{ color: messageColor }}>{messagetext}</small>
 
           <button className="btn btn-primary mt-2" type="submit" id="reset-button" style={{ width: '100%' }} onClick={(e) => resetSubmit(e)}>Reset Password</button>
-        </form>
+        </form><br/>
+        <p style={{ width: '30vw' }}> After clicking the Reset password button this page  takes few seconds to process. Since the backend is deployed in render platform, it takes some time. Please wait until it works.</p>
       </div>
     </>
   )
