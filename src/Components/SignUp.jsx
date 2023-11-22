@@ -31,9 +31,9 @@ function SignUp() {
     let navigate = useNavigate()
     return <>
         <Container className='mt-5'>
-            <div className='d-flex flex-column justify-content-center align-items-center'>
+            <div className='d-flex flex-column justify-content-center align-items-center '>
                 <h1>SignUp</h1>
-                <Form>
+                <Form className='signup-form'>
                     <FormGroup className="mb-3">
                         <FormLabel>Full Name</FormLabel>
                         <FormControl type="text" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setName(e.target.value)}/>

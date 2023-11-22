@@ -27,10 +27,10 @@ function Login() {
 
  
     return <>
-        <Container className='login-form'>
+        <Container className='login-form-cont'>
             <div className='d-flex flex-column justify-content-center align-items-center'>
                 <h1>Login</h1>
-                <Form>
+                <Form className='login-form'>
                     <FormGroup className="mb-3">
                         <FormLabel>Email address</FormLabel>
                         <FormControl type="email" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)}/>

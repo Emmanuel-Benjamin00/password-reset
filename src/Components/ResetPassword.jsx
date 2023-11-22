@@ -79,10 +79,6 @@ function ResetPassword() {
 
   return (
     <>
-      {/* <div className='postman position-absolute top-0 end-0 m-5 p-3  col-sm-12 col-md-3 col-lg-3'>
-        <a className="btn btn-warning col-sm-12" href="https://documenter.getpostman.com/view/30441359/2s9YRCYCBV" target="blank" type="submit" id="button" >Postman Documentation</a>
-        <p className='para'>Use Postman for <br /><span> 1. Creating User(To create a user)</span> <br /><span>2. List all users with their password(To check whether the password is changed).</span> </p>
-      </div> */}
       <div className='d-flex align-items-center justify-content-center flex-column' style={{ height: '100vh' }} >
         <h1 className='fs-2 mb-3 form-box'>Reset Password</h1>
         <form className='col-md-3 col-xxl-5 form-box'>
