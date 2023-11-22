@@ -9,6 +9,7 @@ function SignUp() {
     let [mobile,setMobile] = useState("")
     let [email, setEmail] = useState("")
     let [password, setPassword] = useState("")
+    let [error , setError] = useState("")
 
     let createUser = async (e) => {
         e.preventDefault()
@@ -25,6 +26,7 @@ function SignUp() {
         }
         catch (error) {
             console.log(error.response)
+            setError("User Already Exists")
         }
     }
 
@@ -53,7 +55,7 @@ function SignUp() {
                         <FormLabel>Password</FormLabel>
                         <FormControl type="password" id="exampleInputPassword1" onChange={(e) => setPassword(e.target.value)}/>
                     </FormGroup>
-
+                    <div id="signup-error" className='text-danger'>{error}</div>
                     <Button variant="primary" type="submit" className='button-login' onClick={(e)=>createUser(e)}>
                         Submit
                     </Button>
