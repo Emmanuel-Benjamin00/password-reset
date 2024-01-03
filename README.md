@@ -49,5 +49,5 @@ This document provides details on the Forgot Password feature of the application
 
 1. To get started with the Restaurant Website:
    ```bash
-   git clone https://github.com/Emmanuel-Benjamin00/blog-app-frontend
+   git clone https://github.com/Emmanuel-Benjamin00/password-reset
 
